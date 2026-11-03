@@ -80,9 +80,9 @@
 
   /* Stats */
   .stat-value { font-family: var(--font-display); font-size: 34px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; }
-  .ring { width: 84px; height: 84px; flex-shrink: 0; }
-  .ring circle.track { stroke: var(--border); }
-  .ring circle.bar { stroke: var(--accent); stroke-linecap: round; transition: stroke-dashoffset .9s cubic-bezier(.22,1,.36,1), stroke .4s; }
+  .gauge { width: 84px; height: 84px; flex-shrink: 0; }
+  .gauge circle.track { stroke: var(--border); }
+  .gauge circle.bar { stroke: var(--accent); stroke-linecap: round; transition: stroke-dashoffset .9s cubic-bezier(.22,1,.36,1), stroke .4s; }
 
   /* Kanban */
   .board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
@@ -177,7 +177,7 @@
         <div class="stat-value num mt-2"><span id="statPct">0</span><span class="text-xl" style="color:var(--muted)">%</span></div>
         <div class="text-xs mt-2" style="color:var(--muted)">completadas sobre el total</div>
       </div>
-      <svg class="ring" viewBox="0 0 84 84" aria-hidden="true">
+      <svg class="gauge" viewBox="0 0 84 84" aria-hidden="true">
         <circle class="track" cx="42" cy="42" r="35" fill="none" stroke-width="9"/>
         <circle class="bar" id="ringBar" cx="42" cy="42" r="35" fill="none" stroke-width="9" transform="rotate(-90 42 42)" stroke-dasharray="219.9" stroke-dashoffset="219.9"/>
       </svg>
